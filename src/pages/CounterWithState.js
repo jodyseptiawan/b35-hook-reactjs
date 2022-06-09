@@ -3,16 +3,25 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function CounterWithState() {
   // Init useState Here ...
+  const [counter, setCounter] = useState(0);
 
   // Create function for Handle Increment here ...
+  const Add = () => {
+    setCounter(counter + 1)
+    console.log('State: ',counter)
+  }
 
   // Create function for Handle decrement here ...
+  const Less = () => {
+    setCounter(counter - 1)
+    console.log('State: ',counter)
+  }
 
   return (
     <Container>
       <Row
         className="d-flex align-items-center justify-content-center"
-        style={{ height: '50vh' }}
+        style={{ height: '40vh' }}
       >
         <Col md="6 text-center">
           <h4>Counter with State</h4>
