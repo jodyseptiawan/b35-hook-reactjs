@@ -1,4 +1,5 @@
 //import useState & useEffect here
+import {useState, useEffect} from 'react'
 import { 
     Container, 
     Row, Col, Form, 
@@ -18,8 +19,14 @@ function App() {
     })
 
     // Create DidMount with useEffect inside it can print "App Component Did Mount" & state value here
+    useEffect(() => {
+        console.log("App Component Did Mount")
+    },[])
 
     // Create DidUpdate with useEffect inside it can print "App Component Did Update" & state value here
+     useEffect(() => {
+        console.log("App Component Did Update")
+    },[state])
 
     const handleOnSubmit = (e) => {
         e.preventDefault()
