@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { 
         Container, 
         Row, Col, Form, 
@@ -8,15 +8,50 @@ class ExampleForm extends Component {
   constructor(props){
     super(props)
     // init state attribute here
+    this.state = {
+      fullname: '',
+      email: '',
+      password: ''
+    }
   }
 
   handleOnChange = (e) => {
     // setState here
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    })
   }
 
   handleOnSubmit = (e) => {
     e.preventDefault()
     //print state value with console.log here
+
+    console.log(this.state)
+
+
+    // this.data = {
+    //   fullname: this.state.fullname,
+    //   email: this.state.email,
+    //   password: this.state.password,
+    //   phone: '084281348724'
+    // }
+
+    // console.log(this.data)
+
+    // console.log({
+    //     ...this.state,
+    //     phone: '085155555'
+    //   })
+
+    // this.data = {
+    //     fullname: 'user satu',
+    //     email: 'user1@mail.com',
+    //     password: '123789',
+    //     fullname: 'user dua'
+    // }
+    // console.log(this.data)
+
   }
 
   render(){
