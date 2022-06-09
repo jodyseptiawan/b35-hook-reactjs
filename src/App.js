@@ -21,13 +21,23 @@ export default class App extends Component {
     }
 
     //Create method DidMount inside it can print "App Component Did Mount" & print state value here...
+    componentDidMount() {
+        console.log("App Component Did Mount")
+        // console.log(this.state)
+    }
     
     //Create method DidUpdate inside it can print "App Component Did Update" & print state value here...
+    componentDidUpdate() {
+        console.log("App Component Did Update")
+        // console.log(this.state)
+    }
 
     handleOnSubmit = (e) => {
         e.preventDefault()
+
         const email = document.getElementById('email').value
         const password = document.getElementById('password').value
+
         this.setState({
             isLogin: true,
             user: { 
